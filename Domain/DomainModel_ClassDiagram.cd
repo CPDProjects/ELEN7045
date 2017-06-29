@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Domain.Fault">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAUAgQAQEAAAWAAQAAAQAAAACASAAAAAAKAA=</HashCode>
+      <FileName>Entities\Fault.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="GpsCoordinates" />
+      <Property Name="Priority" />
+      <Property Name="Status" />
+      <Property Name="Address1" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Domain.Address">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAogAAgAAMAEAQAAAAAAIAAAAAAAIAAgAAAAA=</HashCode>
+      <FileName>ValueObjects\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Domain.ReportCard">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAACAAAAAAIAAAAgQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\ReportCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Version" />
+      <Property Name="QuestionsAndAnswers" />
+      <Property Name="Photographs" />
+      <Property Name="GpsCoordinates" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Domain.Media" Collapsed="true">
+    <Position X="3.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAIAAIAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\Media.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.RateCardAnswers" Collapsed="true">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAgAAAAA=</HashCode>
+      <FileName>ValueObjects\RateCardAnswers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.RateCardVersion" Collapsed="true">
+    <Position X="3.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAUAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ValueObjects\RateCardVersion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.GpsCoordinates" Collapsed="true">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\GpsCoordinates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.WorkOrder">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAiAAQEAAAAAAAAAAAAAQQAAAAAAAAAABAEAIAAAAA=</HashCode>
+      <FileName>Entities\WorkOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Activities" />
+      <Property Name="Material" />
+      <Property Name="Equipment" />
+      <Property Name="Status" />
+      <Property Name="RepairTeam" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Domain.WorkOrderActivity" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\WorkOrderActivity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Instructions" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.ActivityInstruction" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ValueObjects\ActivityInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.RepairTeam">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAgAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\RepairTeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.WorkEquipment" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\WorkEquipment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.WorkMaterial" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\WorkMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.FaultOperator" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAgAAAAACAQAAAAAACAA=</HashCode>
+      <FileName>ValueObjects\FaultOperator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Domain.CallCentrePriority" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ValueObjects\CallCentrePriority.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.FaultStatus" Collapsed="true">
+    <Position X="3.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAApICEAAAAAAAAAAAAAAAAAAAAAABCAAAA=</HashCode>
+      <FileName>ValueObjects\FaultStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.FaultCategory" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAYAAAQAAAAAAAAAIQAAAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\FaultCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.WorkOderStatus" Collapsed="true">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAEAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>ValueObjects\WorkOderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
