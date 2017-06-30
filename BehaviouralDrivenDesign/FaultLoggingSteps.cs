@@ -8,11 +8,11 @@ namespace BehaviouralDrivenDesign
     [Binding]
     public class FaultLoggingSteps
     {
-        private User callCenterOperator;
+        private string callCenterOperator;
         [Given(@"call-centre '(.*)' is available")]
-        public void GivenCall_CentreOperatorIsAvailable(string @operator)
+        public void GivenCall_CentreOperatorIsAvailable(string ccOperator)
         {
-            callCenterOperator = new User { UserName = @operator };
+            callCenterOperator = ccOperator;
         }
 
         private bool isInComingCall=false;
@@ -47,17 +47,10 @@ namespace BehaviouralDrivenDesign
             //TDD #2 - Pass the test
             //Assert.AreEqual(expectedResult, 1);
 
-            //TDD #3 - Refactor with business logic with our Domain models
-            var address = new Address
-            {
-                City = city,
-                Number = streetNo,
-                Street = streetName,
-                Surburb = suburb
-            };
-
+            //TDD #3 - Refactor with business logic with our Domain models 
             faultFactory = new FaultFactory();
-            fault = faultFactory.CreateFault(uniqueFaultIdentifier, faulType, address, description, callCenterOperator);
+            fault = faultFactory.CreateFault(uniqueFaultIdentifier, faulType, streetNo,
+            streetName,  suburb, city, description, callCenterOperator);
             Assert.AreEqual(expectedResult, fault.Id);
 
         }

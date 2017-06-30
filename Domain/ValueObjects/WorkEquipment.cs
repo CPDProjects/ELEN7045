@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class WorkEquipment
+    public class WorkEquipment: IModel
     {
         public int Id { get; set; }
         public string Description { get; set; }
         public EquipmentType Type { get; set; }
+        public string ReferenceNo { get ; set ; }
     }
 }

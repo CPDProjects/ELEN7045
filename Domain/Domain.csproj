@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IFault.cs" />
+    <Compile Include="Interfaces\IModel.cs" />
     <Compile Include="Interfaces\IReportCard.cs" />
     <Compile Include="Interfaces\IWorkOrder.cs" />
     <Compile Include="Interfaces\IAddress.cs" />
     <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Services\FaultService.cs" />
     <Compile Include="Services\WorkOrderService.cs" />
     <Compile Include="ValueObjects\ActivityInstruction.cs" />

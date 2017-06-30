@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class RepairTeam
+    public class RepairTeam: IModel
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public User Memebers { get; set; }
-        public User TeamLeader { get; set; }
+        public IUser[] Memebers { get; set; }
+        public IUser TeamLeader { get; set; }
         public Region Region { get; set; }
+        public string ReferenceNo { get; set; }
     }
 }

@@ -16,14 +16,7 @@ namespace Domain
             storeFaults = new List<IFault>();
         }
 
-        public Fault Fault
-        {
-            get => default(Fault);
-            set
-            {
-            }
-        }
-
+        
         public IFault[] GetAll()
         {
             return storeFaults.ToArray();

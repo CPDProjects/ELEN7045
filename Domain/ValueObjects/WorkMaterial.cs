@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class WorkMaterial
+    public class WorkMaterial: IModel
     {
         public int Id { get; set; }
         public string Description { get; set; }
         public MaterialType Type { get; set; }
+        public string ReferenceNo { get ; set; }
     }
 }
