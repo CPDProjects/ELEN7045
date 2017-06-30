@@ -8,12 +8,16 @@ namespace Domain
 {
     public class FaultFactory 
     {
-        private FaultRepository repository = new FaultRepository();
-        private SecurityRepository securityRepo = new SecurityRepository("");
-        
-        public FaultFactory()
+        private FaultRepository repository;
+        private SecurityRepository securityRepo;
+
+        string dbConnection;
+        public FaultFactory(string dbConnection)
         {
-            
+            this.dbConnection = dbConnection;
+            securityRepo = new SecurityRepository(dbConnection);
+            repository = new FaultRepository(dbConnection);
+
         }
         public IFault CreateFault(string faultIdRef, string type, string streetNo,
             string streetName, string suburb, string city, string description, string userName)

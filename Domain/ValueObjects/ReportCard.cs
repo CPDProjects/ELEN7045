@@ -9,9 +9,10 @@ namespace Domain
     public class ReportCard : IReportCard
     {
         public int Id { get; set; }
-        public string Reference { get; set; }
+        public string ReferenceNo { get; set; }
         public RateCardVersion Version { get; set; }
-        public RateCardAnswers[] QuestionsAndAnswers { get; set; }
+        public RateCardQuestion[] Questions { get; set; }
+        public RateCardAnswer[] Answers { get; set; }
         public Media[] Photographs { get; set; }
         public GpsCoordinates GpsCoordinates { get; set; }
 

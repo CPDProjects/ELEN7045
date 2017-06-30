@@ -10,10 +10,11 @@ namespace Domain
     {
         //in-memory fault store
         private List<IFault> storeFaults = null;
-
-        public FaultRepository()
+        private string dbConnection;
+        public FaultRepository(string dbConnection)
         {
             storeFaults = new List<IFault>();
+            this.dbConnection = dbConnection;
         }
 
         

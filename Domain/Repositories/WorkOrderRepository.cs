@@ -48,8 +48,15 @@ namespace Domain
             return storeWorkOrder.FirstOrDefault(f => f.Id.Equals(id));
         }
 
-        public bool UpdateFault(IWorkOrder user)
+        public bool UpdateFault(IWorkOrder workOrder)
         {
+            for (int c = 0; c < storeWorkOrder.Count(); c++)
+                if (storeWorkOrder[c].Id.Equals(workOrder.Id))
+                {
+                    storeWorkOrder[c]=workOrder;
+                    break;
+                }
+
             return true;
         }
 

@@ -68,7 +68,7 @@
     <Compile Include="ValueObjects\FaultOperator.cs" />
     <Compile Include="ValueObjects\MediaType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\ReportCard.cs" />
+    <Compile Include="ValueObjects\ReportCard.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\WorkOrder.cs" />
     <Compile Include="ValueObjects\RateCardAnswers.cs" />

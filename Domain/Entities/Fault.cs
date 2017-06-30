@@ -20,17 +20,20 @@ namespace Domain
         public DateTime DateModified { get; }
         public DateTime DateClosed { get; }
         public IUser FaultOperator { get; set; }
-        public IWorkOrder[] WorkOrders { get; }
-        public IReportCard ReportCard { get; }
 
-        public Address Address1
+        private List<IWorkOrder> _workOrders;
+        public IWorkOrder[] WorkOrders { get { return _workOrders.ToArray(); } }
+
+        private IReportCard _reportCard;
+        public IReportCard ReportCard { get { return _reportCard; } }
+
+        public Fault()
         {
-            get => default(Address);
-            set
-            {
-            }
+            _workOrders = new List<IWorkOrder>();
         }
 
+        
+        
         public void CalculateGpsCoordinates(string location)
         {
             
@@ -38,12 +41,17 @@ namespace Domain
 
         public bool AttachWorkOrder(IWorkOrder workOrder)
         {
+            //TODO validation
+            _workOrders.Add(workOrder);
             return false;
         }
+        
 
         public bool AttachReportCard(IReportCard reportCard)
         {
-            return false;
+            //TODO validation
+            _reportCard = reportCard;
+            return true;
         }
         
     }

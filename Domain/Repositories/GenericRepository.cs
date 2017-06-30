@@ -8,7 +8,7 @@ namespace Domain
 {
     public class GenericRepository<T> where T: IModel
     {
-        private string dbConnection;
+            private string dbConnection;
      
             //in-memory fault store
             private List<T> storeInMemory = null;
@@ -16,6 +16,7 @@ namespace Domain
             public GenericRepository(string dbConnection)
             {
                 storeInMemory = new List<T>();
+                    this.dbConnection = dbConnection;
             }
 
             public T[] GetAll()

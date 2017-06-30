@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class WorkOderFactory
+    public class WorkOrderFactory
     {
+        private string dbConnection;
+        private WorkOrderRepository repoWorkOrder;
+
+        public WorkOrderFactory(string dbConnection)
+        {
+            this.dbConnection = dbConnection;
+            repoWorkOrder = new WorkOrderRepository(dbConnection);
+        }
+
+        public IWorkOrder Create()
+        {
+            var workOrder = new WorkOrder();
+
+        }
     }
 }

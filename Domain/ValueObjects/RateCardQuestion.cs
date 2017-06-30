@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class RateCardQuestion
+    public class RateCardQuestion:IModel
     {
         public int Id { get; set; }
+        public string ReferenceNo { get; set; }
         public string QuestionText { get; set; }
         public bool IsActive { get; set; }
         public bool IsMandatory { get; set; }
