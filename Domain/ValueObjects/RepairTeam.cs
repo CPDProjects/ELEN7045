@@ -14,5 +14,7 @@ namespace Domain
         public IUser TeamLeader { get; set; }
         public Region Region { get; set; }
         public string ReferenceNo { get; set; }
+        public RepairTeamStatus Status { get; set; }
+
     }
 }

@@ -28,19 +28,21 @@ namespace BehaviouralDrivenDesign
         public void ThenIssueAUniqueFaultIdentificationNumber()
         {
             if (faultService == null)
-                faultService = new FaultService(new FaultRepository());
+                faultService = new FaultService(new FaultRepository(""));
             uniqueFaultIdentifier = faultService.IssueNewFaultIdentifier();
             
         }
 
         private int expectedResult = 1;
-        private FaultRepository faultRepository = new FaultRepository();
+        private FaultRepository faultRepository = new FaultRepository("");
         private FaultFactory faultFactory = null;
         private IFault fault;
-        [Then(@"capture '(.*)', '(.*)' , '(.*)' , '(.*)', '(.*)' , '(.*)' and '(.*)'")]
+
+        [Then(@"capture address '(.*)', '(.*)' , '(.*)' , '(.*)', '(.*)' , '(.*)' and '(.*)'")]
         public void ThenCaptureFault_TypeStreetNoStreetNameSuburbCityDescriptionAndPriority(string faulType,string streetNo, 
             string streetName, string suburb, string city, string description, string priority)
         {
+         
             //TDD #1 - Write a failing test
             //Assert.AreEqual(expectedResult, -11);
             
@@ -48,17 +50,21 @@ namespace BehaviouralDrivenDesign
             //Assert.AreEqual(expectedResult, 1);
 
             //TDD #3 - Refactor with business logic with our Domain models 
-            faultFactory = new FaultFactory();
+            faultFactory = new FaultFactory("");
             fault = faultFactory.CreateFault(uniqueFaultIdentifier, faulType, streetNo,
             streetName,  suburb, city, description, callCenterOperator);
             Assert.AreEqual(expectedResult, fault.Id);
 
         }
 
-        [Then(@"operator must use street address to determine the fault location")]
-        public void ThenOperatorMustUseStreetAddressToDetermineTheFaultLocation()
+        private RouteService routeService;
+        [Then(@"operator must use street address '(.*)', '(.*)' , '(.*)' , '(.*)' to determine the fault location '(.*)' and '(*.)'")]
+        public void ThenOperatorMustUseStreetAddressToDetermineTheFaultLocation(string streetNo,
+            string streetName, string suburb, string city, string longitude, string latitude)
         {
-            
+            var gpsCoOrdinates = new GpsCoordinates(streetNo, streetName, suburb, city);
+            Assert.AreEqual(gpsCoOrdinates.Latitude, latitude);
+            Assert.AreEqual(gpsCoOrdinates.Longitude, longitude);
         }
         
         [Then(@"system must list nearby faults \(in-progress and closed\) for the last month")]

@@ -17,9 +17,13 @@ namespace Domain
             repoWorkOrder = new WorkOrderRepository(dbConnection);
         }
 
-        public IWorkOrder Create()
+        public IWorkOrder Create(string faultReferenceNo)
         {
-            var workOrder = new WorkOrder();
+            //TODO: validate fault reference no
+            var workOrder = new WorkOrder (faultReferenceNo);
+            workOrder.Status = WorkOderStatus.New;
+            workOrder.WorkOrderReference = Guid.NewGuid().ToString();
+            return workOrder;
 
         }
     }

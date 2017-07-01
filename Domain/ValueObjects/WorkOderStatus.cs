@@ -2,6 +2,6 @@
 {
     public enum WorkOderStatus
     {
-        New,Scheduled, Active, Closed
+        New, QueuedForScheduling, Scheduled, Active, Closed, Unsatisfactory, FieldInvestigation
     }
 }

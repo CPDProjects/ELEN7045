@@ -3,7 +3,7 @@
   <Class Name="Domain.FaultFactory">
     <Position X="6" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAACAAAAAAAAACAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\FaultFactory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -13,12 +13,9 @@
   <Class Name="Domain.FaultRepository">
     <Position X="2.75" Y="2" Width="2" />
     <TypeIdentifier>
-      <HashCode>QABAgAAAAAAACAAAAAAAAAAgAAAAAEAAAgAAAAAAAAA=</HashCode>
+      <HashCode>YABAAAAAAAAACAAAAAAAAAAgAAAAAEAAAgAAAAAAAAA=</HashCode>
       <FileName>Repositories\FaultRepository.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Fault" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Domain.FaultService">
     <Position X="6" Y="1.75" Width="2" />
@@ -33,7 +30,7 @@
   <Class Name="Domain.Fault" Collapsed="true">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAEAUAgQAQEAAASAAQAAAQAAAACASAAAAAAKAA=</HashCode>
+      <HashCode>AAAGAAAEAUAgQAQEAAASAgQAAAQAAAACASAAAAAAKAA=</HashCode>
       <FileName>Entities\Fault.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

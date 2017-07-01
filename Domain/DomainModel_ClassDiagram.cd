@@ -3,7 +3,7 @@
   <Class Name="Domain.Fault">
     <Position X="0.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAEAUAgQAQEAAAWAAQAAAQAAAACASAAAAAAKAA=</HashCode>
+      <HashCode>AAAGAAAEAUAgQAQEAAASAgQAAAQAAAACASAAAAAAKAA=</HashCode>
       <FileName>Entities\Fault.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,7 +11,6 @@
       <Property Name="GpsCoordinates" />
       <Property Name="Priority" />
       <Property Name="Status" />
-      <Property Name="Address1" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -22,41 +21,6 @@
       <FileName>ValueObjects\Address.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Domain.ReportCard">
-    <Position X="0.5" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAACAACAAAAAAIAAAAgQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\ReportCard.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Version" />
-      <Property Name="QuestionsAndAnswers" />
-      <Property Name="Photographs" />
-      <Property Name="GpsCoordinates" />
-    </ShowAsAssociation>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Domain.Media" Collapsed="true">
-    <Position X="3.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAEAIAAIAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>ValueObjects\Media.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Domain.RateCardAnswers" Collapsed="true">
-    <Position X="3.75" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAgAAAAA=</HashCode>
-      <FileName>ValueObjects\RateCardAnswers.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Domain.RateCardVersion" Collapsed="true">
-    <Position X="3.75" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAUAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>ValueObjects\RateCardVersion.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Domain.GpsCoordinates" Collapsed="true">
     <Position X="3.75" Y="4.25" Width="1.5" />
@@ -91,7 +55,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Domain.ActivityInstruction" Collapsed="true">
-    <Position X="9.75" Y="0.75" Width="1.5" />
+    <Position X="12" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>ValueObjects\ActivityInstruction.cs</FileName>
@@ -100,23 +64,26 @@
   <Class Name="Domain.RepairTeam">
     <Position X="9.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAgAAgAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAgAAgAAAAAAAAAAAAEAAAAgAAAAAAAAABAAA=</HashCode>
       <FileName>ValueObjects\RepairTeam.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Domain.WorkEquipment" Collapsed="true">
     <Position X="9.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAABAAA=</HashCode>
       <FileName>ValueObjects\WorkEquipment.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Domain.WorkMaterial" Collapsed="true">
     <Position X="9.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAABAAA=</HashCode>
       <FileName>ValueObjects\WorkMaterial.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Domain.FaultOperator" Collapsed="true">
     <Position X="3.75" Y="2.75" Width="1.5" />

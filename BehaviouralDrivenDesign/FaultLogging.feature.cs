@@ -64,11 +64,11 @@ namespace BehaviouralDrivenDesign
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Member of public logs a fault with call operator", new string[] {
-                "mytag"}, SourceLine=6)]
+                "fault-logging"}, SourceLine=6)]
         public virtual void MemberOfPublicLogsAFaultWithCallOperator()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Member of public logs a fault with call operator", new string[] {
-                        "mytag"});
+                        "fault-logging"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -78,10 +78,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 10
  testRunner.Then("issue a unique fault identification number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
- testRunner.And("capture \'fault-type\', \'streetNo\' , \'streetName\' , \'suburb\', \'city\' , \'description" +
-                    "\' and \'priority\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("capture \'Accident\', \'streetNo\' , \'streetName\' , \'suburb\', \'city\' , \'description\' " +
+                    "and \'priority\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("operator must use street address to determine the fault location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("operator must use street address to determine the gps co-ordinates \'logintude\' an" +
+                    "d \'latitude\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.And("system must list nearby faults (in-progress and closed) for the last month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14

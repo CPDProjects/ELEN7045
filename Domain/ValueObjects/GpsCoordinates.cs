@@ -8,8 +8,20 @@ namespace Domain
 {
     public class GpsCoordinates
     {
-        public string Address { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        string address;
+        string longitude;
+        string latitude;
+        public GpsCoordinates(string address)
+        {
+            this.address = address;
+        }
+        public GpsCoordinates(string streetNo,
+            string streetName, string suburb, string city)
+        {
+            address = $"{streetNo} {streetName}, {suburb}, {city}";
+        }
+        public string Address { get { return address; } }
+        public string Latitude { get { return latitude; } }
+        public string Longitude { get { return longitude; } }
     }
 }

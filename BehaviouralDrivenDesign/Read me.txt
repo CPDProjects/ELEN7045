@@ -1,0 +1,5 @@
+﻿
+This project requires the following plugins:
+- SpecFlow for Visual Studio 2017 extension
+- SpecRun.SpecFlow 1.6.0 Nuget package including it's dependencies
+- Moq .Net 4.7.63 Nuget Packages

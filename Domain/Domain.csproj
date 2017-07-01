@@ -48,6 +48,7 @@
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Services\FaultService.cs" />
+    <Compile Include="Services\RouteService.cs" />
     <Compile Include="Services\WorkOrderService.cs" />
     <Compile Include="ValueObjects\ActivityInstruction.cs" />
     <Compile Include="Repositories\ReportCardRepository.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="ValueObjects\GpsCoordinates.cs" />
     <Compile Include="ValueObjects\MaterialType.cs" />
     <Compile Include="ValueObjects\Region.cs" />
+    <Compile Include="ValueObjects\RepairTeamStatus.cs" />
     <Compile Include="ValueObjects\UserCategory.cs" />
     <Compile Include="ValueObjects\FaultCategory.cs" />
     <Compile Include="Factories\FaultFactory.cs" />

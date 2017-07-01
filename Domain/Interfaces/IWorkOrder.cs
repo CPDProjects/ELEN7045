@@ -10,9 +10,11 @@ namespace Domain
         DateTime ExecutionDateCompleted { get; set; }
         DateTime ExecutionDateScheduled { get; set; }
         int Id { get; set; }
+        string FaultReferenceNo { get; }
         WorkMaterial[] Material { get; set; }
-        RepairTeam[] RepairTeam { get; set; }
+        RepairTeam[] RepairTeams { get;}
         WorkOderStatus Status { get; set; }
         string WorkOrderReference { get; set; }
+        void AssignRepairTeam(RepairTeam team);
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    class Route
+    public class Route
     {
+        public GpsCoordinates FromLocation { get; set; }
+        public GpsCoordinates TargetLocation { get; set; }
     }
 }
