@@ -8,6 +8,6 @@ Scenario: Supervisor should be able extract all faults flagged as completed revi
 	Given supervisor has an extract of all work-orders completed
 	When supervisor reviews tasks done against fault details logged
 	Then supervisor can sign-off on work-order if 'satisfied' 
-	Or attach new work-order with status of 'awaiting-schedule'
-	Or attach a new work-order with status of 'field-inspection'
+	And attach new work-order with status of 'awaiting-schedule'
+	And attach a new work-order with status of 'field-inspection'
 
