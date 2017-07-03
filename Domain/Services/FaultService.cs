@@ -15,12 +15,14 @@ namespace Domain
 
         }
 
-        public IFault[] FindFaultByLocation(string streetAddress)
+        public FaultService() { }
+
+        public virtual IFault[] FindFaultByLocation(string streetAddress)
         {
             return faultRepository.GetAll().Where(f=>f.Address.ToString().Equals(streetAddress)).ToArray();
         }
 
-        public string IssueNewFaultIdentifier()
+        public virtual string IssueNewFaultIdentifier()
         {
             return Guid.NewGuid().ToString();
         }

@@ -3,7 +3,7 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
-@fault-verification
+@faultverification
 Scenario: Determine route for fault-investigator based on device location 
 	Given fault-investigator is in a correct area 'jurisdiction' 
 	When mobile  'device-location' aware and area of jurisdiction is 'confirmed'

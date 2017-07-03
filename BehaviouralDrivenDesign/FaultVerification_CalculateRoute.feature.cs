@@ -64,11 +64,11 @@ namespace BehaviouralDrivenDesign
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Determine route for fault-investigator based on device location", new string[] {
-                "fault-verification"}, SourceLine=6)]
+                "faultverification"}, SourceLine=6)]
         public virtual void DetermineRouteForFault_InvestigatorBasedOnDeviceLocation()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Determine route for fault-investigator based on device location", new string[] {
-                        "fault-verification"});
+                        "faultverification"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

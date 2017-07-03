@@ -58,11 +58,11 @@ namespace BehaviouralDrivenDesign
         }
 
         private RouteService routeService;
-        [Then(@"operator must use street address '(.*)', '(.*)' , '(.*)' , '(.*)' to determine the fault location '(.*)' and '(*.)'")]
-        public void ThenOperatorMustUseStreetAddressToDetermineTheFaultLocation(string streetNo,
-            string streetName, string suburb, string city, string longitude, string latitude)
+        [Then(@"fault-operator must use street address '(.*)' to determine the fault location '(.*)' and '(.*)'")]
+        public void ThenOperatorMustUseStreetAddressToDetermineTheFaultLocation(string streetAddress,
+            string longitude, string latitude)
         {
-            var gpsCoOrdinates = new GpsCoordinates(streetNo, streetName, suburb, city);
+            var gpsCoOrdinates = new GpsCoordinates(streetAddress);
             Assert.AreEqual(gpsCoOrdinates.Latitude, latitude);
             Assert.AreEqual(gpsCoOrdinates.Longitude, longitude);
         }

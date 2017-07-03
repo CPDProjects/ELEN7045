@@ -72,7 +72,7 @@ namespace BehaviouralDrivenDesign
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("call-centre \'operator\' is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("call-centre \'fault-operator\' is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.When("a member of public (customer) calls in and reports a fault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -81,8 +81,8 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("capture \'Accident\', \'streetNo\' , \'streetName\' , \'suburb\', \'city\' , \'description\' " +
                     "and \'priority\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("operator must use street address to determine the gps co-ordinates \'logintude\' an" +
-                    "d \'latitude\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("fault-operator must use streetadress \'address\' to determine the gps co-ordinates " +
+                    "\'longitude\' and \'latitude\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.And("system must list nearby faults (in-progress and closed) for the last month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14

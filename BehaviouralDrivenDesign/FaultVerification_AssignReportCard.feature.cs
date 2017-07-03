@@ -72,7 +72,7 @@ namespace BehaviouralDrivenDesign
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("\'fault-investigator has identified a fault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("fault-investigator has identified a fault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.When("an investigator picks up the \'Accident\' from system, confirms the fault-type and " +
                     "confirms that fault does exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -80,7 +80,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Then("system must generate a \'report-card\' and display a set of questions associated wi" +
                     "th fault type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
- testRunner.And("investigator must complete report card and \'upload/submit\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("investigator must complete report card and \'uploadsubmit\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
  testRunner.And("fault is flagged as \'verified\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
