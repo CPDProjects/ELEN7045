@@ -2,7 +2,7 @@
 using TechTalk.SpecFlow;
 using Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Moq;
 namespace BehaviouralDrivenDesign
 {
     [Binding]
@@ -62,9 +62,15 @@ namespace BehaviouralDrivenDesign
         public void ThenOperatorMustUseStreetAddressToDetermineTheFaultLocation(string streetAddress,
             string longitude, string latitude)
         {
-            var gpsCoOrdinates = new GpsCoordinates(streetAddress);
-            Assert.AreEqual(gpsCoOrdinates.Latitude, latitude);
-            Assert.AreEqual(gpsCoOrdinates.Longitude, longitude);
+            //mock fault object using fautl interface
+            var mockFault = new Mock<IFault>();
+            //configure expected state and behaviour
+            mockFault.Setup(f => f.GpsCoordinates).Returns(new GpsCoordinates(streetAddress));
+            mockFault.Setup(f => f.AttachReportCard(null)).Returns(true);
+            var fault = mockFault.Object;
+            
+            Assert.AreEqual(fault.GpsCoordinates.Latitude, latitude);
+            Assert.AreEqual(fault.GpsCoordinates.Longitude, longitude);
         }
         
         [Then(@"system must list nearby faults \(in-progress and closed\) for the last month")]
