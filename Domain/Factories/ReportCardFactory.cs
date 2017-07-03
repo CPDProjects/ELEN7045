@@ -23,17 +23,12 @@ namespace Domain
         public IReportCard Create(string userName, string faultType,string streetAddress, string gpsLatitude, string gpsLongitude, Dictionary<string,string> questionAnswerPair)
         {
             var location = streetAddress.Replace(" ","").Replace(",","").PadRight(3, 'X');
-            var refId =  $"{DateTime.Today.Date.ToString("yyMMMddhh")}{userName}{location.Substring(0, 3)}{faultType}";
+            var refId =  $"{DateTime.Today.Date:yyMMMddhh)}{userName}{location.Substring(0, 3)}{faultType}";
             referenceStore.Add(refId);
             var reportCard = new ReportCard
             {
                 ReferenceNo = refId,
-                GpsCoordinates = new GpsCoordinates
-                {
-                    Latitude = gpsLatitude,
-                    Longitude = gpsLongitude,
-                    Address = streetAddress
-                }
+                GpsCoordinates = new GpsCoordinates(streetAddress)
             };
             reportCard.Questions = (from q in questionAnswerPair.Keys
                                     select new RateCardQuestion { ReferenceNo = q }).ToArray();

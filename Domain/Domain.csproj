@@ -93,7 +93,6 @@
     <Compile Include="Repositories\WorkOrderRepository.cs" />
     <Compile Include="ValueObjects\WorkOrderSchedule.cs" />
     <Compile Include="ValueObjects\WorkOrderSchedulerService.cs" />
-    <Compile Include="ValueObjects\WorkOrderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DomainModel_ClassDiagram.cd" />
