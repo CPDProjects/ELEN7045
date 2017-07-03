@@ -1,0 +1,2 @@
+﻿#error (11:2): expected: #EOF, #TableRow, #DocStringSeparator, #StepLine, #TagLine, #ScenarioLine, #ScenarioOutlineLine, #Comment, #Empty, got 'Or attach new work-order with status of 'awaiting-schedule''
+#error (12:2): expected: #EOF, #TableRow, #DocStringSeparator, #StepLine, #TagLine, #ScenarioLine, #ScenarioOutlineLine, #Comment, #Empty, got 'Or attach a new work-order with status of 'field-inspection''

@@ -107,12 +107,22 @@
       <DependentUpon>WorkOrderCreation.feature</DependentUpon>
     </Compile>
     <Compile Include="WorkOrderCreationSteps.cs" />
+    <Compile Include="WorkOrderFullFillment.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkOrderFullFillment.feature</DependentUpon>
+    </Compile>
     <Compile Include="WorkOrderScheduling.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkOrderScheduling.feature</DependentUpon>
     </Compile>
     <Compile Include="WorkOrderSchedulingSteps.cs" />
+    <Compile Include="WorkOrderVerification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkOrderVerification.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -151,9 +161,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WorkOrderCreation.feature.cs</LastGenOutput>
     </None>
+    <None Include="WorkOrderFullFillment.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WorkOrderFullFillment.feature.cs</LastGenOutput>
+    </None>
     <None Include="WorkOrderScheduling.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WorkOrderScheduling.feature.cs</LastGenOutput>
+    </None>
+    <None Include="WorkOrderVerification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WorkOrderVerification.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
