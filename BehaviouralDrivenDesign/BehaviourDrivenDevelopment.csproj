@@ -101,6 +101,7 @@
     <Compile Include="GpsCoordinatesSteps.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestForWorkOrder.cs" />
     <Compile Include="WorkOrderCreation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +119,7 @@
       <DependentUpon>WorkOrderScheduling.feature</DependentUpon>
     </Compile>
     <Compile Include="WorkOrderSchedulingSteps.cs" />
+    <Compile Include="WorkOrderSchedulingTest.cs" />
     <Compile Include="WorkOrderVerification.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

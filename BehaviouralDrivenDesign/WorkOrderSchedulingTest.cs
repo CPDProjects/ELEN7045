@@ -1,26 +1,32 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.Linq;
 using TechTalk.SpecFlow;
 using Domain;
 using Moq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace BehaviouralDrivenDesign
 {
-    [Binding]
-    public class WorkOrderSchedulingSteps
-    {   
+    [TestClass]
+    public class WorkOrderSchedulingTest
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
+
         IWorkOrder workOrder;
         RepairTeam repairTeam;
         WorkOrderSchedulerService schedulingService;
-        
+
         List<IWorkOrder> workOrderList = new List<IWorkOrder>();
 
-        public WorkOrderSchedulingSteps()
+        public WorkOrderSchedulingTest()
         {
             TestSetup();
         }
 
+        [TestMethod]
         private void TestSetup()
         {
             var mockTeam = new Mock<RepairTeam>();
@@ -28,13 +34,13 @@ namespace BehaviouralDrivenDesign
             mockTeam.Setup(t => t.Status).Returns(RepairTeamStatus.Available);
             mockTeam.Setup(t => t.Description).Returns("test");
             repairTeam = mockTeam.Object;
-            
+
 
         }
 
-        [Given(@"there is a work-order in '(.*)' status")]
-        public void GivenThereIsAWork_OrderInStatus(string workOrderStatus)
-        {   
+        [TestMethod]
+        public void GivenThereIsAWork_OrderInStatus()
+        {
             IWorkOrder workOrderA = new WorkOrderFactory().Create("123");
             workOrderA.Status = WorkOderStatus.QueuedForScheduling;
             workOrderList.Add(workOrderA);
@@ -49,8 +55,8 @@ namespace BehaviouralDrivenDesign
             Assert.IsNotNull(workOrderList);
 
         }
-        
-        [When(@"dispatcher finds repair-team that is available and matches repair-team location to a fault-location")]
+
+        [TestMethod]
         public void WhenDispatcherFindsRepair_TeamThatIsAvailableAndMatchesRepair_TeamLocationToAFault_Location()
         {
             var mockSchedulingSvc = new Mock<WorkOrderSchedulerService>();
@@ -61,13 +67,15 @@ namespace BehaviouralDrivenDesign
             Assert.IsNotNull(workOrder);
             mockSchedulingSvc.Verify();
         }
-        
-        [Then(@"work-order must be allocated to that matching repair-team (.*)")]
-        public void ThenWork_OrderMustBeAllocatedToThatMatchingRepair_Team(string repairTeamName)
+
+        [TestMethod]
+        public void ThenWork_OrderMustBeAllocatedToThatMatchingRepair_Team()
         {
+            WhenDispatcherFindsRepair_TeamThatIsAvailableAndMatchesRepair_TeamLocationToAFault_Location();
             WorkOrderSchedulerService workOrderSchedulerService = new WorkOrderSchedulerService();
             workOrderSchedulerService.AssignWorkOrder(workOrder, repairTeam);
             Assert.IsNotNull(workOrder.RepairTeams);
         }
     }
 }
+

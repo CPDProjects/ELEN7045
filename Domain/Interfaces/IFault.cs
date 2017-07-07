@@ -18,6 +18,7 @@ namespace Domain
         FaultStatus Status { get; }
         FaultCategory Type { get; set; }
         IWorkOrder[] WorkOrders { get; }
+        IWorkOrder getActiveWorkOrder();
 
         bool AttachReportCard(IReportCard reportCard);
         bool AttachWorkOrder(IWorkOrder workOrder);

@@ -49,6 +49,7 @@
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Services\FaultService.cs" />
     <Compile Include="Services\RouteService.cs" />
+    <Compile Include="Services\WorkOrderSchedulerService.cs" />
     <Compile Include="Services\WorkOrderService.cs" />
     <Compile Include="ValueObjects\ActivityInstruction.cs" />
     <Compile Include="Repositories\ReportCardRepository.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="ValueObjects\WorkOrderFulfillment.cs" />
     <Compile Include="Repositories\WorkOrderRepository.cs" />
     <Compile Include="ValueObjects\WorkOrderSchedule.cs" />
-    <Compile Include="ValueObjects\WorkOrderSchedulerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DomainModel_ClassDiagram.cd" />

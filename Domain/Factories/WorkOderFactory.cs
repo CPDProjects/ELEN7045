@@ -8,18 +8,14 @@ namespace Domain
 {
     public class WorkOrderFactory
     {
-        private string dbConnection;
-        private WorkOrderRepository repoWorkOrder;
-
-        public WorkOrderFactory(string dbConnection)
-        {
-            this.dbConnection = dbConnection;
-            repoWorkOrder = new WorkOrderRepository(dbConnection);
-        }
 
         public IWorkOrder Create(string faultReferenceNo)
         {
-            //TODO: validate fault reference no
+            /*if(string.IsNullOrEmpty(faultReferenceNo))
+            {
+                throw new WorkOrderCreationException("faultReferenceNo is missing");
+            }*/
+
             var workOrder = new WorkOrder (faultReferenceNo);
             workOrder.Status = WorkOderStatus.New;
             workOrder.WorkOrderReference = Guid.NewGuid().ToString();

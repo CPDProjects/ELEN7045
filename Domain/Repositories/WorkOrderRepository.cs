@@ -30,10 +30,10 @@ namespace Domain
             return storeWorkOrder.ToArray();
         }
 
-        public int Create(IWorkOrder workOrder)
+        public int Save(IWorkOrder workOrder)
         {
-            if (storeWorkOrder.Exists(f => workOrder.WorkOrderReference.Equals(f.WorkOrderReference)))
-                return -1;
+            //if (storeWorkOrder.Exists(f => workOrder.WorkOrderReference.Equals(f.WorkOrderReference)))
+              //  return -1;
             storeWorkOrder.Add(workOrder);
             return storeWorkOrder.Count();
         }

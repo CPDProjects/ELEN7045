@@ -32,6 +32,15 @@ namespace Domain
             _workOrders = new List<IWorkOrder>();
         }
 
+        public IWorkOrder getActiveWorkOrder()
+        {
+            IWorkOrder activeWorkOrder = null;
+            for (var i = 0; i < WorkOrders.Length; i++)
+            {
+                activeWorkOrder = WorkOrders[i];
+            }
+            return activeWorkOrder;
+        }
         
         
         public void CalculateGpsCoordinates(string location)
@@ -43,8 +52,9 @@ namespace Domain
         {
             //TODO validation
             _workOrders.Add(workOrder);
-            return false;
+            return true;
         }
+
         
 
         public bool AttachReportCard(IReportCard reportCard)

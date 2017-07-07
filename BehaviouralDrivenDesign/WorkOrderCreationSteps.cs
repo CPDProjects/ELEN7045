@@ -14,17 +14,15 @@ namespace BehaviouralDrivenDesign
         private Mock<IFault> faultMock = new Mock<IFault>();
         IFault fault;
         private WorkOrderFactory factoryWorkOrder;
+        private WorkOrderRepository repositoryWorkOrder;
         IWorkOrder workOrder;            
 
         [Given(@"fault-investigator has verified a fault \('(.*)'\)")]
         public void GivenFault_InvestigatorHasVerifiedAFault(string faultStatus)
         {
-            //repoFault = new FaultRepository("");
-            //repoFault.GetAll().First(f => f.Status == FaultStatus.Verified);
-
+            
             //moq fault state
             faultMock.Setup(f => f.Status).Returns(FaultStatus.Verified);
-            faultMock.Setup(f => f.Type).Returns(FaultCategory.Accident);
             fault = faultMock.Object;
             Assert.AreEqual(fault.Status.ToString().ToLower(), faultStatus.ToLower());
         }
@@ -32,9 +30,12 @@ namespace BehaviouralDrivenDesign
         [When(@"work-order-manager creates a new work-order and assign to fault with '(.*)' status")]
         public void WhenWork_Order_ManagerCreatesANewWork_OrderAndAssignToFault(string workOrderStatus)
         {
-            factoryWorkOrder = new WorkOrderFactory("");
+            factoryWorkOrder = new WorkOrderFactory();
             workOrder = factoryWorkOrder.Create(fault.FaultIdReference);
+            Assert.IsNotNull(workOrder);
             Assert.AreEqual(workOrder.Status.ToString().ToLower(), workOrderStatus.ToLower());
+            repositoryWorkOrder.Save(workOrder);
+            fault.AttachWorkOrder(workOrder);
         }
 
         private WorkOrderService workService;
